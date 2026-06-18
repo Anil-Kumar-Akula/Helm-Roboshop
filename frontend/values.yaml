@@ -1,5 +1,5 @@
 deployment:
- image: anilroyal8999/roboshop-frontend
+ image: anilroyal8999/roboshop-frontend:v1
  replicas: 1
 service:
  port: 80
