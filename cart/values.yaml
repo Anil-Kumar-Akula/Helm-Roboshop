@@ -4,5 +4,5 @@ deployment:
 service:
  port: 8080
 configMap:
-  catalogue_host: "catalogue"
-  catalogue_port: "8080"
+  CATALOGUE_HOST: "catalogue"
+  CATALOGUE_PORT: "8080"
