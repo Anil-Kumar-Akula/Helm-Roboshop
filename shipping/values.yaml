@@ -2,4 +2,4 @@ deployment:
   replicas: 2
   image: anilroyal8999/shipping:v1
 service:
-  port: 8080
+  servicePort: 8080
