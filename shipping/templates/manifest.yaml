@@ -18,7 +18,7 @@ metadata:
     component: shipping
     tier: backend
 spec:
-  replicas: {{ Values.deployment.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     # these labels are used to select pods
     matchLabels:
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: shipping
-        image: {{ Values.deployment.image }}
+        image: {{ .Values.deployment.image }}
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
@@ -69,5 +69,5 @@ spec:
     tier: backend
   ports:
     - protocol: TCP
-      port: {{ Values.service.port }}
+      port: {{ .Values.service.port }}
       targetPort: 8080 # container port
