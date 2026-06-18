@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: cart
-        image: " {{ .Values.deployment.image }} "
+        image: "{{ .Values.deployment.image }}"
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
