@@ -5,8 +5,8 @@ metadata:
   namespace: roboshop
 data:
   REDIS_HOST: "redis"
-  CATALOGUE_HOST: {{ .Values.configmap.CATALOGUE_HOST | quote }}
-  CATALOGUE_PORT: {{ .Values.configmap.CATALOGUE_PORT | quote }}
+  CATALOGUE_HOST: "catalogue"
+  CATALOGUE_PORT: "8080"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: cart
-        image: "{{ .Values.deployment.image }}"
+        image: {{ .Values.deployment.image }}
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
