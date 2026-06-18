@@ -1,4 +1,4 @@
-apiVersion: V2
+apiVersion: v2
 name: mysql
 version: v1
 description: deploying mysql:v1
