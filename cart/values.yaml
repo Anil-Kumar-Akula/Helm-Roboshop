@@ -3,6 +3,6 @@ deployment:
  image: anilroyal8999/cart:v1
 service:
  port: 8080
-configMap:
+configmap:
   CATALOGUE_HOST: "catalogue"
   CATALOGUE_PORT: "8080"
