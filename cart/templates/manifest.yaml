@@ -5,8 +5,8 @@ metadata:
   namespace: roboshop
 data:
   REDIS_HOST: "redis"
-  CATALOGUE_HOST: " {{ .Values.configmap.CATALOGUE_HOST }} "
-  CATALOGUE_PORT: " {{ .Values.configmap.CATALOGUE_PORT }} "
+  CATALOGUE_HOST: {{ .Values.configmap.CATALOGUE_HOST | quote }}
+  CATALOGUE_PORT: {{ .Values.configmap.CATALOGUE_PORT | quote }}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -69,5 +69,5 @@ spec:
     tier: backend
   ports:
     - protocol: TCP
-      port: " {{ .Values.service.port }} " # service port
+      port: {{ .Values.service.port }} # service port
       targetPort: 8080 # container port
