@@ -1,0 +1,5 @@
+apiVersion: v2
+name: payment
+version: v1
+description: deployment payment:v1
+appVersion: 1
