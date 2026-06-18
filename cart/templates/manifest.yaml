@@ -5,8 +5,8 @@ metadata:
   namespace: roboshop
 data:
   REDIS_HOST: "redis"
-  CATALOGUE_HOST:  {{ .Values.configMap.catalogue_host }}
-  CATALOGUE_PORT: {{ .Values.configMap.catalogue_port }}
+  CATALOGUE_HOST:  {{ .Values.configMap.CATALOGUE_HOST }}
+  CATALOGUE_PORT: {{ .Values.configMap.CATALOGUE_PORT }}
 ---
 apiVersion: apps/v1
 kind: Deployment
