@@ -1,0 +1,5 @@
+deployment:
+  imageRepo: anilroyal8999/catalogue
+  imageVersion: v1
+service:
+  servicePort: 8080 # default value
