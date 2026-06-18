@@ -1,0 +1,4 @@
+deployment:
+ image: anilroyal8999/mysql:v1
+service:
+ port: 3306
